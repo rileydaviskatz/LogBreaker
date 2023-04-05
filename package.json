@@ -28,6 +28,7 @@
     "dotenv": "^9.0.2",
     "dotenv-webpack": "^7.0.2",
     "express": "^4.17.1",
+    "howlongtobeat": "^1.7.0",
     "html-webpack-plugin": "^5.2.0",
     "nodemon": "^2.0.22",
     "pg": "^8.10.0",
