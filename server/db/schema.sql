@@ -15,10 +15,10 @@ use logbreaker;
     -- primary key (id)
     -- );
 
-create table users )
+create table users (
     id int not null primary key auto_increment,
     username varchar(255) not null,
-    password varchar(255) not null,
+    --password varchar(255) not null,
 );
 
 create table games (
@@ -26,7 +26,7 @@ create table games (
     title varchar(255) not null,
     --text [description] varchar(1000), 
     summary varchar(1000),
-    id_user into not null,
+    id_user int not null,
     foreign key (id_user) references users(id)
 ); 
 
