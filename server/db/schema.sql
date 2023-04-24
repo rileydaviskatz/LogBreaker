@@ -27,6 +27,7 @@ create table games (
     --text [description] varchar(1000), 
     summary varchar(1000),
     id_user int not null,
-    foreign key (id_user) references users(id)
+    foreign key (id_user) references users(id),
+    gLength int not null,
 ); 
 
