@@ -21,13 +21,28 @@ create table users (
     --password varchar(255) not null,
 );
 
-create table games (
+create table library (
+    foreign key (id_game) references game(id),
+    foreign key (gameTitle) references game(title),
+
+);
+
+create table game (
     id int not null primary key auto_increment,
     title varchar(255) not null,
     --text [description] varchar(1000), 
     summary varchar(1000),
-    id_user int not null,
     foreign key (id_user) references users(id),
-    gLength int not null,
+    gameLength int not null,
+    publisher varchar(50),
+    gameConsole varchar(50),
+    releaseDate date null,
+     
 ); 
+
+create table backlog (
+    foreign key (game_title) references game(title),
+    foreign key (id_game) references game(id),
+);
+
 
