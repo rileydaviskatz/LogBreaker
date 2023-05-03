@@ -21,7 +21,7 @@ create table users (
 );
 
 create table library (
-    libraryID int primary key not null identity(1,1),
+    libraryId int primary key not null identity(1,1),
     foreign key (id_game) references game(id),
     foreign key (gameTitle) references game(title),
 );
@@ -53,16 +53,16 @@ CREATE TABLE t1 (
 --Foreign Key Ref Example: 
 
 create table empAddy (
-    rowID int not null primary key identity(1,1),
-    empID int references empDeets (empID),
+    rowId int not null primary key identity(1,1),
+    empId int references empDeets (empID),
     empAddy varchar(100)
 );
 -- FK Column name 1st, then parent table name, then key column name (in parentheses)
 
 create table backlog (
-    logID int not null primary key auto_increment,
-    gameID int references games (id),
-    regDate datetime default current_timestamp on update current_timestamp,
-    regTime timestamp default current_timestamp on update current_timestamp
+    logId int not null primary key auto_increment,
+    gameId int references games (id),
+    loggedOn datetime default current_timestamp on update current_timestamp,
+    --regTime timestamp default current_timestamp on update current_timestamp
 );
 -- gameID int references games (id),
